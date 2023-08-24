@@ -30,7 +30,9 @@ github_links = driver.find_elements(By.LINK_TEXT, "selene")
 if len(github_links) == 3:
     print("Тест пройшов успішно. Знайдено 3 посилання.")
 else:
-    print(f"Тест не пройшов. Знайдено {len(github_links)} посилання(ь).")
+    print("Тест не пройшов. Знайдено {len(github_links)} посилання(ь).")
+
 
 # Закриття веб-драйвера
 driver.quit()
+
