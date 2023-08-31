@@ -22,9 +22,8 @@ driver.implicitly_wait(10)
 first_link = driver.find_element(By.CSS_SELECTOR, "div.result__title")
 first_link.click()
 
-
 # Перевірка наявності трьох посилань на https://github.com/yashaka/selene
-# github_links = driver.find_elements(By.CSS_SELECTOR, "a[href='/yashaka/selene']")
+#github_links = driver.find_elements(By.CSS_SELECTOR, "a[href='/yashaka/selene']")
 github_links = driver.find_elements(By.LINK_TEXT, "selene")
 
 if len(github_links) == 3:
