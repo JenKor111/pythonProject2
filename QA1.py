@@ -59,8 +59,9 @@ def test_shopping_cart():
     time.sleep(5)
     browser.element('[href="#tab-specification"]').click()
     time.sleep(5)
-    browser.element('#button-cart.btn-primary').click()
-    time.sleep(5)
     browser.element('.counter.counter-plus.material-design-add186').click()
     time.sleep(5)
+    browser.element('#button-cart.btn-primary').click()
+    time.sleep(5)
+
 
