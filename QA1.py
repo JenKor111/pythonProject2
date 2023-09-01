@@ -2,6 +2,7 @@ import time
 
 from selene import Browser, by
 from selene.support.shared import browser
+from selene.support.conditions import be
 
 def test_open_friends():
     browser.open('http://opencart.qatestlab.net/')
@@ -38,3 +39,14 @@ def test_authorization():
     time.sleep(3)
     browser.element(by.css('[value="Войти"]')).click()
     time.sleep(5)
+
+def test_search():
+    browser.open('http://opencart.qatestlab.net/')
+    time.sleep(5)
+    browser.element('[name="search"]').type('Popamazing')
+    time.sleep(5)
+    browser.element('#search > button').click()
+    time.sleep(5)
+    search_results_text = browser.all('.product-layout')
+    assert len(search_results_text) > 0, 'No found'
+
