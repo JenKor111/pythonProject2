@@ -50,3 +50,17 @@ def test_search():
     search_results_text = browser.all('.product-layout')
     assert len(search_results_text) > 0, 'No found'
 
+def test_shopping_cart():
+    browser.open('http://opencart.qatestlab.net/')
+    time.sleep(5)
+    browser.element('[href="http://opencart.qatestlab.net/index.php?route=product/category&path=31"]').click()
+    time.sleep(5)
+    browser.element('[href="http://opencart.qatestlab.net/index.php?route=product/product&path=31&product_id=34"]').click()
+    time.sleep(5)
+    browser.element('[href="#tab-specification"]').click()
+    time.sleep(5)
+    browser.element('#button-cart.btn-primary').click()
+    time.sleep(5)
+    browser.element('.counter.counter-plus.material-design-add186').click()
+    time.sleep(5)
+
