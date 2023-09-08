@@ -29,6 +29,8 @@ browser.element('[href="/uk/women/verhnyaya-odezhda/puhoviki/131229609-puhove-pa
 #додавання в кошик
 browser.element('.vFhB6yaBSu_LOrFZyXUr.IR7CcsmoykX4NQzvgGCt.ZhFAwoZUgtFYw9M1SNDv').click()
 time.sleep(5)
+browser.element('.vFhB6yaBSu_LOrFZyXUr.IR7CcsmoykX4NQzvgGCt.ZhFAwoZUgtFYw9M1SNDv').click()
+time.sleep(5)
 #Редагування кількості і видалення
 browser.element('[class="vFhB6yaBSu_LOrFZyXUr elUm1FXWrtyJt0afwHkk l8dvmdA19kSQoAuZ3AQF"]').click()
 time.sleep(2)
